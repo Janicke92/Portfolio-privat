@@ -1,0 +1,188 @@
+
+/*    CSS Variables    */
+
+:root {
+    --color-header-bg: #596441;
+    --color-header-h1: #1f2410;
+    --color-bg: #f1e5cd;
+    --color-footer-bg: #a0703e;
+    --color-body-p: #2e2b1f;
+    --color-accent-light: #f1e5cd;
+    --color-links: #5a6e3f;
+    --color-links-hover: #849d6e;
+
+    --font-body: 'Lora', serif;
+    --font-header-h1: 'Metamorphous', cursive;
+    --font-header-p: 'Petit Formal Script', cursive;
+}
+
+
+/*   Global styles   */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: var(--color-header-bg);
+    text-align: center;
+}
+
+header h1 {
+    color: var(--color-header-h1);
+    font-family: var(--font-header-h1);
+    padding: 2rem;
+    font-size: 4rem;
+}
+
+header p {
+    font-family: var(--font-header-p);
+    color: var(--color-accent-light);
+    padding-bottom: 1rem;
+    font-size: 2rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-links);
+    font-weight: bold;
+}
+
+footer a {
+    color: var(--color-body-p);
+}
+
+footer a:visited {
+    color: var(--color-body-p);
+}
+
+a:visited {
+    color: var(--color-links);
+}
+
+a:hover {
+    color: var(--color-links-hover);
+}
+
+footer a:hover {
+    color: var(--color-accent-light);
+}
+
+body {
+    background-color: var(--color-bg);
+    font-family: var(--font-body);
+    color: var(--color-body-p);
+}
+
+main {
+    max-width: 900px;
+    width: 100%;
+    padding: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 200px;
+}
+
+main h1 {
+    font-size: 2.5rem;
+}
+
+.about-me-section {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+}
+
+.about-me-section > div {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-me-section p {
+    margin-top: 10px;
+}
+
+.about-me-section img {
+    max-width: 17rem;
+    height: auto;
+    border-radius: 50%;
+    margin-top: 70px;
+}
+
+.my-projects-section {
+    margin-top: 40px;
+}
+
+.reflection-section h1,
+.my-projects-section h1 {
+    margin-bottom: 30px;
+    text-align: center;
+    border-bottom: 3px solid var(--color-body-p);
+    padding-bottom: 20px;
+}
+
+.teaser-card {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    flex-direction: column;
+}
+
+.teaser-card img {
+    max-width: 175px;
+    border-radius: 10px;
+}
+
+.teaser-card-text {
+    max-width: 500px;
+}
+
+.teaser-card-text p {
+    margin-top: 5px;
+}
+
+footer {
+    background-color: var(--color-footer-bg);
+    color: var(--color-accent-light);
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    margin: 40px;
+}
+
+
+@media (min-width: 500px) {
+    .teaser-card {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        margin-bottom: 3rem;
+    }
+}
+
+
+@media (min-width: 600px) {
+    
+    .teaser-card img {
+        max-width: 220px;
+    }
+
+    .teaser-card {
+        gap: 3rem;
+        margin-bottom: 4rem;
+        align-items: center;
+    }
+
+    .teaser-card-text p {
+        margin-top: 15px;
+    }
+}
